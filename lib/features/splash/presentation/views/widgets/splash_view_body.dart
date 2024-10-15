@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gramaz_app/core/utils/assets.dart';
+import '../../../../../core/utils/assets.dart';
 import 'package:gramaz_app/core/utils/constants.dart';
 import 'package:gramaz_app/features/home/presentation/views/home_view.dart';
 import 'package:gramaz_app/features/splash/presentation/views/widgets/sliding_text.dart';
