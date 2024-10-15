@@ -21,7 +21,7 @@ class GramazApp extends StatelessWidget {
       builder: (_, child) {
         return GetMaterialApp(
           theme:
-              ThemeData.dark().copyWith(scaffoldBackgroundColor: primaryColor),
+              ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor),
           debugShowCheckedModeBanner: false,
           title: 'Gramaz',
           home: child,
