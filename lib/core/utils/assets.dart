@@ -6,4 +6,5 @@ class AssetsData {
   static const searchIcon = 'assets/icons/search_icon.svg';
   static const menuIcon = 'assets/icons/menu_icon.svg';
   static const saveIcon = 'assets/icons/save_icon.svg';
+  static const shareIcon = 'assets/icons/share_icon.svg';
 }
