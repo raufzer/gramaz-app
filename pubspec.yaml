@@ -79,6 +79,7 @@ flutter:
     - assets/icons/search_icon.svg
     - assets/icons/home_icon.svg
     - assets/icons/save_icon.svg
+    - assets/icons/share_icon.svg
   # Images 
     - assets/images/gramaz_logo.png
     - assets/images/test_image.png
