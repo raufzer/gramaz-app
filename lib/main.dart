@@ -1,12 +1,10 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:gramaz_app/core/utils/app_routers.dart';
 import 'package:gramaz_app/core/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'features/splash/presentation/views/splash_view.dart';
-
-main() {
+void main() {
   runApp(const GramazApp());
 }
 
@@ -19,21 +17,22 @@ class GramazApp extends StatelessWidget {
       designSize: const Size(360, 780),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_, child) {
-        return GetMaterialApp(
+      builder: (_, __) {
+        return MaterialApp.router(
+          routerConfig: AppRouters.router,
           theme: ThemeData.dark().copyWith(
-              scaffoldBackgroundColor: kPrimaryColor,
-              textTheme: GoogleFonts.playfairDisplayTextTheme(
-                  ThemeData.dark().textTheme.apply(
+            scaffoldBackgroundColor: kPrimaryColor,
+            textTheme: GoogleFonts.playfairDisplayTextTheme(
+              ThemeData.dark().textTheme.apply(
                     bodyColor: kTertiaryColor,
-                    displayColor: kTertiaryColor
-                  ))),
+                    displayColor: kTertiaryColor,
+                  ),
+            ),
+          ),
           debugShowCheckedModeBanner: false,
           title: 'Gramaz',
-          home: child,
         );
       },
-      child: const SplashView(),
     );
   }
 }

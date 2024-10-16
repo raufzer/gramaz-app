@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:gramaz_app/features/books/presentation/views/widgets/custom_list_view_item.dart';
 
 
 class FeaturesListViewItems extends StatelessWidget {

@@ -14,7 +14,7 @@ class CategoryButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Expanded(
-        child: Text('Raouf',
+        child: Text('Category',
             style: Styles.textStyle16.copyWith(color: const Color(0xFFF9C975))),
       ),
     );

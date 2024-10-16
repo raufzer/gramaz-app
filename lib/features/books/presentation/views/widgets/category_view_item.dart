@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gramaz_app/core/utils/colors.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/category_button.dart';
+import 'package:gramaz_app/features/books/presentation/views/widgets/category_button.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
@@ -35,7 +35,9 @@ class CategoryViewItem extends StatelessWidget {
                 children: [
                   Text(
                     'Book Title',
-                    style: Styles.textStyle14,
+                    style: Styles.textStyle14.copyWith(
+                      fontWeight: FontWeight.w600
+                    ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -47,7 +49,7 @@ class CategoryViewItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    '385 dz',
+                    "385 £",
                     style: Styles.textStyle14.copyWith(
                         fontWeight: FontWeight.bold),
                     maxLines: 1,

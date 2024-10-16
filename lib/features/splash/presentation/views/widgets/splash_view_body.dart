@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/utils/app_routers.dart';
 import '../../../../../core/utils/assets.dart';
-import 'package:gramaz_app/core/utils/constants.dart';
-import 'package:gramaz_app/features/home/presentation/views/home_view.dart';
 import 'package:gramaz_app/features/splash/presentation/views/widgets/sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -21,13 +20,19 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
-    navigateToHome();
+
+    
+    animationController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        navigateToHome();
+      }
+    });
   }
 
   @override
   void dispose() {
-    super.dispose();
     animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -55,9 +60,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => HomeView(),
-          transition: Transition.fadeIn, duration: kTranstionDuration);
-    });
+    
+    if (mounted) {
+      Future.delayed(const Duration(seconds: 2), () {
+        GoRouter.of(context).push(AppRouters.kHomeView);
+      });
+    }
   }
 }

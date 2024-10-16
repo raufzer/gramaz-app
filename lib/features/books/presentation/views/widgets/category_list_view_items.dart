@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/category_view_item.dart';
+import 'package:gramaz_app/features/books/presentation/views/widgets/category_view_item.dart';
 
 class CategoryListViewItems extends StatelessWidget {
   const CategoryListViewItems({super.key});
@@ -12,7 +12,7 @@ class CategoryListViewItems extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 4.0),
           child: const CategoryViewItem(),
         );
       },
