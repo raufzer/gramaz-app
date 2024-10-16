@@ -16,8 +16,7 @@ class CustomAppBar extends StatelessWidget {
           Image.asset(AssetsData.gramazLogo),
           const Spacer(),
           GestureDetector(
-            onTap: () {
-            },
+            onTap: () {},
             child: SvgPicture.asset(
               AssetsData.shoppingCartIcon,
               height: 20.r,

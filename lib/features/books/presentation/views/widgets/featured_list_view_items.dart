@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/custom_list_view_item.dart';
 
-
 class FeaturesListViewItems extends StatelessWidget {
   const FeaturesListViewItems({super.key});
 
@@ -15,7 +14,10 @@ class FeaturesListViewItems extends StatelessWidget {
           itemBuilder: (context, indesx) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: const CustomListViewItem(itemHeight: 220, itemWidth: 130,),
+              child: const CustomListViewItem(
+                itemHeight: 220,
+                itemWidth: 130,
+              ),
             );
           }),
     );

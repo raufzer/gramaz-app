@@ -19,8 +19,7 @@ class BookInfoSection extends StatelessWidget {
       children: [
         Text(
           'Book Title',
-          style: Styles.textStyle14
-              .copyWith(fontWeight: FontWeight.w600),
+          style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
@@ -34,8 +33,7 @@ class BookInfoSection extends StatelessWidget {
         if (showPrice) // Check the flag and conditionally display the price
           Text(
             "385 £",
-            style: Styles.textStyle14
-                .copyWith(fontWeight: FontWeight.bold),
+            style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),

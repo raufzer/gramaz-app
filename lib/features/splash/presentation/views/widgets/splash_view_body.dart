@@ -21,7 +21,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
     initSlidingAnimation();
 
-    
     animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         navigateToHome();
@@ -60,7 +59,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    
     if (mounted) {
       Future.delayed(const Duration(seconds: 2), () {
         GoRouter.of(context).push(AppRouters.kHomeView);

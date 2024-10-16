@@ -30,8 +30,8 @@ abstract class AppRouters {
           return const BooksDetailsView();
         },
       ),
-        GoRoute(
-        path: kBookDetailsView,
+      GoRoute(
+        path: kSearchView,
         builder: (BuildContext context, GoRouterState state) {
           return const SearchView();
         },
