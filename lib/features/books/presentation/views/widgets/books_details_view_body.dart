@@ -1,16 +1,66 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/features/books/presentation/views/widgets/categories_slider.dart';
-import 'package:gramaz_app/features/books/presentation/views/widgets/category_list_view_items.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:gramaz_app/core/utils/assets.dart';
+import 'package:gramaz_app/core/utils/constants.dart';
+import 'package:gramaz_app/features/books/presentation/views/widgets/book_details_view_bottom_nav_bar.dart';
+import 'package:gramaz_app/features/books/presentation/views/widgets/book_info_section.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/custom_app_bar.dart';
-import 'package:gramaz_app/features/books/presentation/views/widgets/featured_list_view_items.dart';
-
-import '../../../../../core/utils/styles.dart';
+import 'package:gramaz_app/features/books/presentation/views/widgets/custom_list_view_item.dart';
 
 class BooksDetailsViewBody extends StatelessWidget {
   const BooksDetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          CustomAppBar(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomListViewItem(
+                itemHeight: 270,
+                itemWidth: 180,
+              ),
+            ],
+          ),
+          const SizedBox(height: 60),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: BookInfoSection(
+                  showPrice: false,
+                ),
+              ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(AssetsData.shareIcon),
+                    const SizedBox(width: 20),
+                    SvgPicture.asset(AssetsData.saveIcon),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              kTestText,
+              maxLines: 5,
+            ),
+          )
+        ],
+      ),
+      bottomNavigationBar: const CustomBookDetailsViewNavBar(),
+    );
   }
 }

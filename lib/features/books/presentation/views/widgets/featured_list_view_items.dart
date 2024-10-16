@@ -15,7 +15,7 @@ class FeaturesListViewItems extends StatelessWidget {
           itemBuilder: (context, indesx) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: const CustomListViewItem(),
+              child: const CustomListViewItem(itemHeight: 220, itemWidth: 130,),
             );
           }),
     );
