@@ -11,7 +11,7 @@ class HomreRepoImpl implements HomeRepo {
   HomreRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchBestNewestBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
       var data = await apiService.get(
           endPoint: 'volumes?q=subject:programming&Filtering=free-ebooks');
