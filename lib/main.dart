@@ -2,6 +2,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gramaz_app/core/utils/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'features/splash/presentation/views/splash_view.dart';
 
@@ -20,8 +21,13 @@ class GramazApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return GetMaterialApp(
-          theme:
-              ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor),
+          theme: ThemeData.dark().copyWith(
+              scaffoldBackgroundColor: kPrimaryColor,
+              textTheme: GoogleFonts.playfairDisplayTextTheme(
+                  ThemeData.dark().textTheme.apply(
+                    bodyColor: kTertiaryColor,
+                    displayColor: kTertiaryColor
+                  ))),
           debugShowCheckedModeBanner: false,
           title: 'Gramaz',
           home: child,

@@ -7,14 +7,20 @@ class CustomListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 220.r,
-      width: 130.r,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.r),
-        image: DecorationImage(
-            image: AssetImage(AssetsData.testImage), fit: BoxFit.fill),
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          height: 220.r,
+          width: 130.r,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.r),
+            image: DecorationImage(
+                image: AssetImage(AssetsData.testImage), fit: BoxFit.fill),
+          ),
+          
+        ),
+      ],
     );
   }
 }
