@@ -5,7 +5,7 @@ import 'package:gramaz_app/features/books/data/repos/homre_repo_impl.dart';
 
 final getIt = GetIt.instance;
 
-void setup() {
+void setupServiceLocator() {
   getIt.registerSingleton<ApiService>(ApiService(Dio()));
   getIt.registerSingleton<HomreRepoImpl>(HomreRepoImpl(
     getIt.get<ApiService>(),

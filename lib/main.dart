@@ -10,7 +10,7 @@ import 'features/books/presentation/manager/featured_books_cubit/featured_books_
 import 'features/books/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 
 void main() {
-  setup();
+  setupServiceLocator();
   runApp(const GramazApp());
 }
 
