@@ -39,6 +39,7 @@ dependencies:
   flutter_plugin_android_lifecycle: ^2.0.23
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.10+1
+  get_it: ^8.0.0
   go_router: ^14.3.0
   google_fonts: ^6.2.1
   gradient_borders: ^1.0.1
