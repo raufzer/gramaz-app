@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:gramaz_app/features/books/data/models/book_model/book_model.dart';
-import 'package:gramaz_app/features/books/data/repos/home_repo.dart';
+import 'package:gramaz_app/features/books/data/repositories/home_repo.dart';
 
 part 'featured_books_state.dart';
 

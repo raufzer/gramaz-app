@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gramaz_app/core/utils/app_routers.dart';
+import 'package:gramaz_app/core/config/app_routes.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/book_info_section.dart';
 
-import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/app_assets.dart';
 
 class CategoryViewItem extends StatelessWidget {
   const CategoryViewItem({super.key});

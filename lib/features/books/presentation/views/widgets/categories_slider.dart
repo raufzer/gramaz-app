@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/colors.dart';
+import 'package:gramaz_app/core/config/app_colors.dart';
 
-import '../../../../../core/utils/styles.dart';
+import '../../../../../core/config/app_styles.dart';
 
 class CategoriesSlider extends StatelessWidget {
   const CategoriesSlider({super.key});

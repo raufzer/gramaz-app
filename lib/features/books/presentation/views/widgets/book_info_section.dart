@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/category_button.dart';
 
-import '../../../../../core/utils/colors.dart';
-import '../../../../../core/utils/styles.dart';
+import '../../../../../core/config/app_colors.dart';
+import '../../../../../core/config/app_styles.dart';
 
 class BookInfoSection extends StatelessWidget {
   final bool showPrice; // Add a boolean flag to control price visibility

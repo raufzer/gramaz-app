@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/constants.dart';
+import 'package:gramaz_app/core/config/app_constants.dart';
 
 abstract class Styles {
   // Base styles for different font sizes

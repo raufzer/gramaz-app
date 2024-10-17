@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/colors.dart';
-import 'package:gramaz_app/core/utils/styles.dart';
+import 'package:gramaz_app/core/config/app_colors.dart';
+import 'package:gramaz_app/core/config/app_styles.dart';
 
 class ProductButtons extends StatelessWidget {
   const ProductButtons({super.key});

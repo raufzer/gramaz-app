@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/styles.dart';
+import '../../../../../core/config/app_styles.dart';
 
 class CategoryButton extends StatelessWidget {
   const CategoryButton({super.key});

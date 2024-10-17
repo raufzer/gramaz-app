@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/utils/app_routers.dart';
-import '../../../../../core/utils/assets.dart';
+import '../../../../../core/config/app_routes.dart';
+import '../../../../../core/utils/app_assets.dart';
 import 'package:gramaz_app/features/splash/presentation/views/widgets/sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {

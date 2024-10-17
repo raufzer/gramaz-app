@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:gramaz_app/features/books/presentation/manager/newest_books_cubit/newest_books_state.dart';
+import 'package:gramaz_app/features/books/presentation/view_models/newest_books_cubit/newest_books_state.dart';
 
-import '../../../data/repos/home_repo.dart';
+import '../../../data/repositories/home_repo.dart';
 
 class NewestBooksCubit extends Cubit<NewestBooksState> {
   NewestBooksCubit(this.homeRepo) : super(NewestBooksInitial());

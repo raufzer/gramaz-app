@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gramaz_app/core/utils/assets.dart';
+import 'package:gramaz_app/core/utils/app_assets.dart';
 
 class CustomListViewItem extends StatelessWidget {
   const CustomListViewItem(

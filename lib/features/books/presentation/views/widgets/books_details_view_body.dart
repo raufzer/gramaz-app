@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:gramaz_app/core/utils/assets.dart';
-import 'package:gramaz_app/core/utils/constants.dart';
+import 'package:gramaz_app/core/utils/app_assets.dart';
+import 'package:gramaz_app/core/config/app_constants.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/book_details_view_bottom_nav_bar.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/book_info_section.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/custom_app_bar.dart';

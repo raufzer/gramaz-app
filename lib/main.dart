@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/app_routers.dart';
-import 'package:gramaz_app/core/utils/colors.dart';
+import 'package:gramaz_app/core/config/app_routes.dart';
+import 'package:gramaz_app/core/config/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:gramaz_app/core/utils/service_locator.dart';
-import 'package:gramaz_app/features/books/data/repos/homre_repo_impl.dart';
-import 'features/books/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
-import 'features/books/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
+import 'package:gramaz_app/core/services/app_service_locator.dart';
+import 'package:gramaz_app/features/books/data/repositories/homre_repo_impl.dart';
+import 'features/books/presentation/view_models/featured_books_cubit/featured_books_cubit.dart';
+import 'features/books/presentation/view_models/newest_books_cubit/newest_books_cubit.dart';
 
 void main() {
   setupServiceLocator();
@@ -28,7 +28,7 @@ class GramazApp extends StatelessWidget {
           providers: [
             BlocProvider(
               create: (context) =>
-                  FeaturedBooksCubit(getIt.get<HomreRepoImpl>()),
+                  FeaturedBooksCubit(getIt.get<HomreRepoImpl>())..fetchFeaturedBooks(),
             ),
             BlocProvider(
               create: (context) => NewestBooksCubit(getIt.get<HomreRepoImpl>()),

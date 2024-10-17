@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import '../../../../core/errors/failures.dart';
+import '../../../../core/errors/error_handling.dart';
 import '../models/book_model/book_model.dart';
 
 abstract class HomeRepo {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/colors.dart';
+import 'package:gramaz_app/core/config/app_colors.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/book_buttons.dart';
 
 // Assuming you are using your predefined colors

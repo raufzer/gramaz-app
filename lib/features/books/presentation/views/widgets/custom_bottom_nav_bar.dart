@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gramaz_app/core/utils/app_routers.dart';
-import 'package:gramaz_app/core/utils/colors.dart';
+import 'package:gramaz_app/core/config/app_routes.dart';
+import 'package:gramaz_app/core/config/app_colors.dart';
 
-import '../../../../../core/utils/assets.dart'; // Assuming you are using your predefined colors
+import '../../../../../core/utils/app_assets.dart'; // Assuming you are using your predefined colors
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
