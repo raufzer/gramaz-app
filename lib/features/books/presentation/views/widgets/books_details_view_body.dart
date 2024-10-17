@@ -21,8 +21,7 @@ class BooksDetailsViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomListViewItem(
-                itemHeight: 270,
-                itemWidth: 180,
+ imageUrl: 'https://imgur.com/3TIXA6o',
               ),
             ],
           ),

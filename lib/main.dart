@@ -28,17 +28,19 @@ class GramazApp extends StatelessWidget {
           providers: [
             BlocProvider(
               create: (context) =>
-                  FeaturedBooksCubit(getIt.get<HomreRepoImpl>())..fetchFeaturedBooks(),
+                  FeaturedBooksCubit(getIt.get<HomereRepoImpl>())
+                    ..fetchFeaturedBooks(),
             ),
             BlocProvider(
-              create: (context) => NewestBooksCubit(getIt.get<HomreRepoImpl>()),
+              create: (context) => NewestBooksCubit(getIt.get<HomereRepoImpl>())
+                ..fetchNewestBooks(),
             ),
           ],
           child: MaterialApp.router(
             routerConfig: AppRouters.router,
             theme: ThemeData.dark().copyWith(
               scaffoldBackgroundColor: kPrimaryColor,
-              textTheme: GoogleFonts.playfairDisplayTextTheme(
+              textTheme: GoogleFonts.spaceGroteskTextTheme(
                 ThemeData.dark().textTheme.apply(
                       bodyColor: kTertiaryColor,
                       displayColor: kTertiaryColor,

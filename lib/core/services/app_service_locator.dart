@@ -7,7 +7,7 @@ final getIt = GetIt.instance;
 
 void setupServiceLocator() {
   getIt.registerSingleton<ApiService>(ApiService(Dio()));
-  getIt.registerSingleton<HomreRepoImpl>(HomreRepoImpl(
+  getIt.registerSingleton<HomereRepoImpl>(HomereRepoImpl(
     getIt.get<ApiService>(),
   ));
 }

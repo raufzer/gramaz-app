@@ -9,28 +9,30 @@ class CategoriesSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Row(
         children: [
           Text(
             'Best Seller',
-            style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w400),
+            style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w400),
           ),
           const SizedBox(
-            width: 30,
+            width: 35,
           ),
           Text(
             'Latest',
-            style: Styles.textStyle16
+            style: Styles.textStyle14
                 .copyWith(fontWeight: FontWeight.w400, color: kHighlightColor),
           ),
           const SizedBox(
-            width: 30,
+            width: 35,
           ),
           Text(
             'Coming soon',
-            style: Styles.textStyle16
-                .copyWith(fontWeight: FontWeight.w400, color: kHighlightColor),
+            style: Styles.textStyle14.copyWith(
+              fontWeight: FontWeight.w400,
+              color: kHighlightColor,
+            ),
           ),
         ],
       ),

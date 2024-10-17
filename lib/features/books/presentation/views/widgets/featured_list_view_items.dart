@@ -4,8 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gramaz_app/core/shared/widgets/custom_error_widget.dart';
 import 'package:gramaz_app/features/books/presentation/view_models/featured_books_cubit/featured_books_cubit.dart';
 import 'package:gramaz_app/features/books/presentation/views/widgets/custom_list_view_item.dart';
-import 'package:bloc/bloc.dart';
-
 import '../../../../../core/shared/widgets/custom_loading_indicator.dart';
 
 class FeaturesListViewItems extends StatelessWidget {
@@ -15,17 +13,19 @@ class FeaturesListViewItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FeaturedBooksCubit, FeaturedBooksState>(
         builder: (context, state) {
-      if (state is FeaturedBooksState) {
+      if (state is FeaturedBooksSuccess) {
         return SizedBox(
           height: 170.r,
           child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, indesx) {
+              itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: const CustomListViewItem(
-                    itemHeight: 220,
-                    itemWidth: 130,
+                  child: CustomListViewItem(
+                    imageUrl:
+                        state.books[index].volumeInfo.imageLinks.thumbnail,
                   ),
                 );
               }),

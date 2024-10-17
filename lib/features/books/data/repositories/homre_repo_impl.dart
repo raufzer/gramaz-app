@@ -5,16 +5,16 @@ import 'package:gramaz_app/core/services/api/books_api_service.dart';
 import 'package:gramaz_app/features/books/data/models/book_model/book_model.dart';
 import 'package:gramaz_app/features/books/data/repositories/home_repo.dart';
 
-class HomreRepoImpl implements HomeRepo {
+class HomereRepoImpl implements HomeRepo {
   final ApiService apiService;
 
-  HomreRepoImpl(this.apiService);
+  HomereRepoImpl(this.apiService);
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
       var data = await apiService.get(
-          endPoint: 'volumes?q=subject:programming&Filtering=free-ebooks');
+          endPoint: '/volumes?q=subject:programming&Filtering=free-ebooks');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
@@ -30,10 +30,10 @@ class HomreRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFeatureBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
       var data = await apiService.get(
-          endPoint: 'volumes?q=featured&Filtering=free-ebooks');
+          endPoint: '/volumes?q=featured&Filtering=free-ebooks');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
